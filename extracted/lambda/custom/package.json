@@ -1,0 +1,21 @@
+{
+  "name": "secure-my-future",
+  "version": "1.0.0",
+  "description": "Alexa skill for estate planning tips by age group, sponsored by Amicus Edge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "alexa",
+    "skill",
+    "estate planning",
+    "amicus edge"
+  ],
+  "author": "Amicus Edge",
+  "license": "ISC",
+  "dependencies": {
+    "ask-sdk-core": "^2.12.1",
+    "ask-sdk-model": "^1.38.1"
+  }
+}

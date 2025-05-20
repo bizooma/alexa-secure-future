@@ -1,0 +1,238 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "secure my future",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "GetAgeGroupIntent",
+          "slots": [
+            {
+              "name": "ageGroup",
+              "type": "AgeGroupType"
+            }
+          ],
+          "samples": [
+            "I am in my {ageGroup}",
+            "I'm in my {ageGroup}",
+            "My age is {ageGroup}",
+            "I'm {ageGroup}",
+            "I am {ageGroup}",
+            "{ageGroup}",
+            "I'm in the {ageGroup} age group",
+            "I am in the {ageGroup} age group"
+          ]
+        },
+        {
+          "name": "ScheduleConsultationIntent",
+          "slots": [],
+          "samples": [
+            "Schedule a consultation",
+            "I want to schedule a consultation",
+            "Book a consultation",
+            "I'd like to book a consultation",
+            "Schedule a free consultation",
+            "I want to talk to someone",
+            "Can I talk to someone",
+            "I need more information",
+            "I want to learn more",
+            "Schedule appointment",
+            "Book appointment",
+            "Consultation"
+          ]
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "name": "AgeGroupType",
+          "values": [
+            {
+              "name": {
+                "value": "twenties",
+                "synonyms": [
+                  "20s",
+                  "twenties",
+                  "twenty",
+                  "20 to 29",
+                  "20",
+                  "21",
+                  "22",
+                  "23",
+                  "24",
+                  "25",
+                  "26",
+                  "27",
+                  "28",
+                  "29"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "forties",
+                "synonyms": [
+                  "40s",
+                  "forties",
+                  "forty",
+                  "40 to 49",
+                  "40",
+                  "41",
+                  "42",
+                  "43",
+                  "44",
+                  "45",
+                  "46",
+                  "47",
+                  "48",
+                  "49"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "sixties plus",
+                "synonyms": [
+                  "60s",
+                  "sixties",
+                  "sixty",
+                  "60 plus",
+                  "over 60",
+                  "60",
+                  "61",
+                  "62",
+                  "63",
+                  "64",
+                  "65",
+                  "66",
+                  "67",
+                  "68",
+                  "69",
+                  "70s",
+                  "seventies",
+                  "70",
+                  "80s",
+                  "eighties",
+                  "80",
+                  "senior"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "thirties",
+                "synonyms": [
+                  "30s",
+                  "thirties",
+                  "thirty",
+                  "30 to 39",
+                  "30",
+                  "31",
+                  "32",
+                  "33",
+                  "34",
+                  "35",
+                  "36",
+                  "37",
+                  "38",
+                  "39"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "fifties",
+                "synonyms": [
+                  "50s",
+                  "fifties",
+                  "fifty",
+                  "50 to 59",
+                  "50",
+                  "51",
+                  "52",
+                  "53",
+                  "54",
+                  "55",
+                  "56",
+                  "57",
+                  "58",
+                  "59"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "GetAgeGroupIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "ageGroup",
+              "type": "AgeGroupType",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.GetAgeGroupIntent.ageGroup"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.GetAgeGroupIntent.ageGroup",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What age group are you in? You can say twenties, forties, or sixties plus."
+          },
+          {
+            "type": "PlainText",
+            "value": "To provide you with the most relevant estate planning tips, please tell me your age group. Are you in your twenties, forties, or sixties plus?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Which age group do you belong to? Twenties, forties, or sixties plus?"
+          }
+        ]
+      }
+    ]
+  }
+}

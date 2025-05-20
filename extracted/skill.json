@@ -1,0 +1,51 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Get estate planning tips tailored to your age group",
+          "examplePhrases": [
+            "Alexa, open secure my future",
+            "Alexa, ask secure my future for estate planning tips",
+            "Alexa, ask secure my future to schedule a consultation"
+          ],
+          "keywords": [
+            "estate planning",
+            "wills",
+            "healthcare proxy",
+            "long-term care",
+            "legal advice",
+            "financial planning"
+          ],
+          "name": "Secure My Future",
+          "description": "Secure My Future provides estate planning tips tailored to your age group. Sponsored by Amicus Edge, this skill offers guidance on healthcare proxies for those in their 20s, updating wills for those in their 40s, and long-term care planning for those 60+. Users can also schedule a free consultation with Amicus Edge for personalized estate planning strategies."
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "To test this skill, launch it and provide an age group when prompted. The skill will provide estate planning tips based on the age group and offer to schedule a consultation. You can say yes to get information on scheduling a consultation or no to end the session.",
+      "category": "EDUCATION_AND_REFERENCE",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:XXXXXXXXXXXX:function:secure-my-future"
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {
+          "privacyPolicyUrl": "https://www.amicusedge.com/privacy",
+          "termsOfUseUrl": "https://www.amicusedge.com/terms"
+        }
+      },
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}
